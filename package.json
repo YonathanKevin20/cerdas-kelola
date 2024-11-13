@@ -1,0 +1,35 @@
+{
+  "name": "cerdas-kelola",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^2.19.2",
+    "@vuepic/vue-datepicker": "^10.0.0",
+    "dayjs": "^1.11.13",
+    "dayjs-nuxt": "^2.1.11",
+    "drizzle-orm": "^0.36.1",
+    "maska": "^3.0.3",
+    "node-xlsx": "^0.24.0",
+    "nuxt": "^3.14.159",
+    "postgres": "^3.4.5",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.1",
+    "@nuxtjs/supabase": "^1.4.2",
+    "drizzle-kit": "^0.28.0",
+    "nuxt-echarts": "^0.2.4",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.10"
+  }
+}
