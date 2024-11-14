@@ -2,13 +2,26 @@
 const supabase = useSupabaseClient()
 const session = useSupabaseSession()
 
+const { public: { siteUrl } } = useRuntimeConfig()
+
+const getURL = () => {
+  let url =
+    siteUrl ??
+    'http://localhost:3000/'
+  // Make sure to include `https://` when not localhost.
+  url = url.startsWith('http') ? url : `https://${url}`
+  // Make sure to include a trailing `/`.
+  url = url.endsWith('/') ? url : `${url}/`
+  return url
+}
+
 const errorMessage = ref('')
 
 const signInWithGoogle = async () => {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: 'http://localhost:3000/api/auth/callback',
+      redirectTo: `${getURL()}api/auth/callback`,
     }
   })
 

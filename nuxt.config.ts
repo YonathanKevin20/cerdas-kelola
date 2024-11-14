@@ -2,6 +2,14 @@
 export default defineNuxtConfig({
   ssr: false,
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'id',
+      },
+    }
+  },
+
   build: {
     transpile: ['@vuepic/vue-datepicker']
   },
@@ -47,6 +55,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     databaseUrl: '',
+    public: {
+      siteUrl: '',
+    },
   },
 
   supabase: {
