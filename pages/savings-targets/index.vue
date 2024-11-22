@@ -77,7 +77,7 @@ const isAchieved = (percentage: number) => {
 
               <div class="flex-1 min-w-0 space-y-1">
                 <div class="flex items-center space-x-2">
-                  <p class="text-lg font-medium text-gray-900 dark:text-white truncate">{{ item.target_name }}</p>
+                  <p class="text-lg font-medium truncate">{{ item.target_name }}</p>
                   <BadgeTargetStatus :is-achieved="isAchieved(calculateProgressPercentage(totalSavings(+item.current_amount, +item.progress_amount), +item.target_amount))" />
                 </div>
 

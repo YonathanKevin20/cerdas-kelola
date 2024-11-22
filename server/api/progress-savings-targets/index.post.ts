@@ -31,6 +31,7 @@ export default defineEventHandler(async (event) => {
       sql<string>`DATE(${savingsTargets.created_at}) = CURRENT_DATE`,
     )
   )
+  .limit(1)
 
   const isProgressDoneTodayItem = isProgressDoneTodayItems[0]
   const isTargetJustCreatedItem = isTargetJustCreatedItems[0]

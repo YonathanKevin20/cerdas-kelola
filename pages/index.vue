@@ -45,7 +45,7 @@ const signInWithGoogle = async () => {
 
         <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl space-y-6">
           <div>
-            <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Cerdas Kelola</h1>
+            <h1 class="text-3xl font-bold">Cerdas Kelola</h1>
             <p class="mt-2 text-gray-600 dark:text-gray-300">Aplikasi manajemen keuangan pribadi yang dirancang khusus untuk anak hingga remaja.</p>
           </div>
 
