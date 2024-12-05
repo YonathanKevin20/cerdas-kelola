@@ -39,7 +39,7 @@ const emit = defineEmits<{
         </div>
       </template>
 
-      <p>Apakah Anda yakin ingin menghapus progres target tabungan ini?</p>
+      <p>Apakah kamu yakin ingin menghapus progres target tabungan ini?</p>
 
       <template #footer>
         <div class="flex justify-end space-x-4">

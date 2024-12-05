@@ -12,7 +12,7 @@ const signOut = async () => {
 </script>
 
 <template>
-  <div class="ml-auto">
+  <div class="ml-2">
     <template v-if="user">
       <ULink
         to="/profile"

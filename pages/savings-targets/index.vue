@@ -17,13 +17,19 @@ const modal = useModal()
 const openModalAddProgressSavingsTarget = (id: number) => {
   modal.open(ModalAddProgressSavingsTarget, {
     id,
-    onSuccess: () => refresh()
+    onSuccess: () => {
+      refresh()
+      refreshNuxtData('savings-targets')
+    }
   })
 }
 const openModalDeleteSavingsTarget = (id: number) => {
   modal.open(ModalDeleteSavingsTarget, {
     id,
-    onSuccess: () => refresh()
+    onSuccess: () => {
+      refresh()
+      refreshNuxtData('savings-targets')
+    }
   })
 }
 
@@ -108,7 +114,7 @@ const isAchieved = (percentage: number) => {
                 </p>
                 <div class="w-[200px] bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-1 overflow-hidden">
                   <div
-                    class="h-2 bg-gradient-to-r from-sky-700 via-sky-500 to-sky-400 transition-all duration-300"
+                    class="h-2 bg-gradient-to-r from-sky-700 via-sky-500 to-sky-400 rounded-full transition-all duration-300"
                     :style="`width: ${calculateProgressPercentage(totalSavings(+item.current_amount, +item.progress_amount), +item.target_amount)}%`"></div>
                 </div>
                 <div class="flex justify-between w-[200px] mt-1">
@@ -126,7 +132,7 @@ const isAchieved = (percentage: number) => {
           <div class="flex space-x-2 ml-4">
             <UTooltip
               v-if="!isAchieved(calculateProgressPercentage(totalSavings(+item.current_amount, +item.progress_amount), +item.target_amount))"
-              :text="item.is_progress_done_today ? 'Anda sudah menambah tabungan hari ini' : 'Tambah tabungan hari ini'">
+              :text="item.is_progress_done_today ? 'Kamu sudah menambah tabungan hari ini' : 'Tambah tabungan hari ini'">
               <UButton
                 icon="i-heroicons-plus-circle"
                 color="sky"

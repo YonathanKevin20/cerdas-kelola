@@ -13,6 +13,7 @@ useHead({
     <UContainer class="flex flex-col h-screen">
       <nav class="flex items-center my-4">
         <Menu />
+        <Reminder />
         <Auth />
       </nav>
       <NuxtPage />
