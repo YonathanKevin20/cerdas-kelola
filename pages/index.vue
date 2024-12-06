@@ -38,8 +38,8 @@ const signInWithGoogle = async () => {
     <div class="max-w-md mx-auto pt-20">
       <div class="text-center space-y-6">
         <div class="relative">
-          <div class="absolute -top-16 left-1/2 -translate-x-1/2">
-            <img src="/logo.svg" class="w-24 h-24 rounded-full bg-white dark:bg-gray-800 p-2 shadow-lg" alt="Cerdas Kelola" />
+          <div class="absolute -top-20 left-1/2 -translate-x-1/2">
+            <img src="/logo.png" class="w-28 h-28 rounded-full bg-white dark:bg-gray-800 p-2 shadow-lg" alt="Cerdas Kelola" />
           </div>
         </div>
 

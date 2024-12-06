@@ -37,7 +37,7 @@ const actionItems = (row: { id: number, screenshots_count: number }) => [
   [{
     label: 'Edit',
     icon: 'i-heroicons-pencil-square-20-solid',
-    click: () => navigateTo(`/transactions/${row.id}/edit`)
+    click: async () => await navigateTo(`/transactions/${row.id}/edit`)
   }],
   [{
     label: 'Hapus',

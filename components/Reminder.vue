@@ -1,4 +1,12 @@
 <script setup lang="ts">
+const open = ref(false)
+
+const doNavigate = async () => {
+  open.value = false
+
+  await navigateTo('/savings-targets')
+}
+
 const { data } = await useFetch(`/api/savings-targets`, {
   key: 'savings-targets',
   default: () => []
@@ -12,7 +20,7 @@ const anyReminders = computed(() => {
 </script>
 
 <template>
-  <UPopover class="ml-auto">
+  <UPopover v-model:open="open" class="ml-auto">
     <UChip
       color="red"
       inset
@@ -55,7 +63,7 @@ const anyReminders = computed(() => {
                   icon="i-heroicons-arrow-right"
                   square
                   size="xs"
-                  to="/savings-targets" />
+                  @click="doNavigate()" />
               </div>
             </div>
           </template>
